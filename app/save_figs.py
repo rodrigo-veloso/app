@@ -42,9 +42,9 @@ conn = create_connection('testDB.db')
 
 with conn:
 	#criando tabela de imagens
-	#sql = 'CREATE TABLE images(ID INTEGER PRIMARY KEY AUTOINCREMENT, IMAGE BLOB NOT NULL);'
-	#cur = conn.cursor()
-	#cur.execute(sql)
+	sql = 'CREATE TABLE images(ID INTEGER PRIMARY KEY AUTOINCREMENT, IMAGE BLOB NOT NULL);'
+	cur = conn.cursor()
+	cur.execute(sql)
 	#inserção das imagens na tabela no formato blob
 	i = 1
 	for nome in lista_nomes:
